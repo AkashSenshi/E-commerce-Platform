@@ -1,4 +1,4 @@
-package com.apnadukaan.productservice.dto;
+package com.apnadukaan.productservice.dtos;
 
 import lombok.Getter;
 import lombok.Setter;

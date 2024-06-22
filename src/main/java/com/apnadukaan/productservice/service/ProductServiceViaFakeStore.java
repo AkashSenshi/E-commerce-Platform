@@ -1,20 +1,16 @@
 package com.apnadukaan.productservice.service;
 
-import com.apnadukaan.productservice.ExceptionHandler.Exception.ProductNotFoundException;
-import com.apnadukaan.productservice.dto.ProductDtoViaFakeStore;
+import com.apnadukaan.productservice.ExceptionHandler.Exceptions.ProductNotFoundException;
+import com.apnadukaan.productservice.dtos.ProductDtoViaFakeStore;
 import com.apnadukaan.productservice.model.Category;
 import com.apnadukaan.productservice.model.Product;
 import org.springframework.http.HttpMethod;
-import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpMessageConverterExtractor;
 import org.springframework.web.client.RequestCallback;
-import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -91,7 +87,7 @@ public class ProductServiceViaFakeStore implements ProductService {
         product.setImageUrl(dto.getImage());
 
         Category category = new Category();
-        category.setCategoryName(dto.getCategory());
+        category.setDescription(dto.getCategory());
         product.setCategory(category);
         return product;
     }
@@ -103,7 +99,7 @@ public class ProductServiceViaFakeStore implements ProductService {
         dto.setPrice(product.getPrice());
         dto.setDescription(product.getDescription());
         dto.setImage(product.getImageUrl());
-        dto.setCategory(product.getCategory().getCategoryName());
+        dto.setCategory(product.getCategory().getDescription());
         return dto;
     }
 }

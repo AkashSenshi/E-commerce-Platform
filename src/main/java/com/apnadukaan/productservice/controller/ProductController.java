@@ -1,7 +1,6 @@
 package com.apnadukaan.productservice.controller;
 
-import com.apnadukaan.productservice.ExceptionHandler.Exception.ProductNotFoundException;
-import com.apnadukaan.productservice.dto.ProductDtoViaFakeStore;
+import com.apnadukaan.productservice.ExceptionHandler.Exceptions.ProductNotFoundException;
 import com.apnadukaan.productservice.model.Product;
 import com.apnadukaan.productservice.service.ProductService;
 import org.springframework.http.HttpStatus;
@@ -31,7 +30,7 @@ public class ProductController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Product> updateProduct(@PathVariable Long id, @RequestBody Product product) throws ProductNotFoundException {
+    public ResponseEntity<Product> updateProduct(@PathVariable Long id, @RequestBody Product product)  {
         ResponseEntity<Product> response = null;
         product.setId(id);
         Product newProduct = productService.updateProduct(product);

@@ -1,4 +1,4 @@
-package com.apnadukaan.productservice.ExceptionHandler.Exception;
+package com.apnadukaan.productservice.ExceptionHandler.Exceptions;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

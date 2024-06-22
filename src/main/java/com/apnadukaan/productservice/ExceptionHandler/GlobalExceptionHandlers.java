@@ -1,7 +1,7 @@
 package com.apnadukaan.productservice.ExceptionHandler;
 
-import com.apnadukaan.productservice.ExceptionHandler.Exception.ProductNotFoundException;
-import com.apnadukaan.productservice.ExceptionHandler.dto.ProductNotFoundDto;
+import com.apnadukaan.productservice.ExceptionHandler.Exceptions.ProductNotFoundException;
+import com.apnadukaan.productservice.ExceptionHandler.dtos.ProductNotFoundDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

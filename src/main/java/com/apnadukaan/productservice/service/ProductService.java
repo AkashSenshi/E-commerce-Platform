@@ -1,6 +1,7 @@
 package com.apnadukaan.productservice.service;
 
-import com.apnadukaan.productservice.ExceptionHandler.Exception.ProductNotFoundException;
+
+import com.apnadukaan.productservice.ExceptionHandler.Exceptions.ProductNotFoundException;
 import com.apnadukaan.productservice.model.Product;
 
 import java.util.List;
