@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Service
+@Service("ProductServiceViaFakeStore")
 public class ProductServiceViaFakeStore implements ProductService {
     private RestTemplate restTemplate;
 
